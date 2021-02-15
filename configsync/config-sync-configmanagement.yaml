@@ -1,0 +1,10 @@
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+spec:
+  clusterName: example-cluster
+  git:
+    syncRepo: https://github.com/baseonballs/csp-config-management
+    secretType: none
+    policyDir: configsync/policy
